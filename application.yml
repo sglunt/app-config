@@ -1,7 +1,17 @@
 security:
   basic:
-    enabled: false # turn off securing our application endpoints
+    enabled: false
 
 management:
   security:
-    enabled: false # turn off securing the actuator endpoints
+    enabled: false
+
+logging:
+  level:
+    io:
+      pivotal: DEBUG
+
+spring: # <---NEW SECTION
+  cloud:
+    services:
+      registrationMethod: direct
